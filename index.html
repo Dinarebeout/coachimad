@@ -1,0 +1,416 @@
+downloadcontent_copyexpand_less
+     <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المدرب عماد | تدريب شخصي احترافي</title>
+    <meta name="description" content="تدريب شخصي احترافي مع المدرب عماد في الدار البيضاء. خبرة في الفنون القتالية والركبي بأسعار مناسبة. احجز جلستك الآن.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- General Styles --- */
+        :root {
+            --primary-color: #c0392b; /* Red accent */
+            --secondary-color: #2c3e50; /* Dark Blue/Grey */
+            --background-color: #f4f4f4;
+            --text-color: #333;
+            --white-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--white-color);
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        h1 { font-size: 3rem; font-weight: 900; }
+        h2 { font-size: 2.5rem; text-align: center; }
+        h3 { font-size: 1.5rem; }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-light {
+            background-color: var(--white-color);
+        }
+
+        .section-dark {
+            background-color: var(--background-color);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white-color);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 700;
+            transition: transform 0.3s, background-color 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #a53125;
+            transform: translateY(-3px);
+        }
+
+        /* --- Header & Navigation --- */
+        .navbar {
+            background: rgba(44, 62, 80, 0.9);
+            color: var(--white-color);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--white-color);
+            text-decoration: none;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar ul li a {
+            color: var(--white-color);
+            padding: 1rem;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Hero Section --- */
+        #home {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('imad-hero-bg.jpg') no-repeat center center/cover;
+            height: 100vh;
+            color: var(--white-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        #home h1 {
+            color: var(--white-color);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+
+        #home p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        /* --- About Section --- */
+        #about .container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        #about .about-img {
+            flex: 1;
+            text-align: center;
+        }
+
+        #about .about-img img {
+            max-width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        #about .about-text {
+            flex: 1.5;
+        }
+
+        /* --- Services Section --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .service-card {
+            background: var(--white-color);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-card i {
+            font-size: 3rem; /* You can use a font icon library like FontAwesome */
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* --- Gallery Section --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+
+        /* --- Pricing Section --- */
+        .pricing-card {
+            max-width: 400px;
+            margin: auto;
+            background: var(--secondary-color);
+            color: var(--white-color);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .pricing-card h3 {
+            color: var(--white-color);
+            font-size: 1.8rem;
+        }
+        .price {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--white-color);
+        }
+        .price span {
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+        
+        /* --- Contact Section --- */
+        .contact-form {
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .contact-info p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--secondary-color);
+            color: var(--white-color);
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        /* --- Responsive Styles --- */
+        @media(max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+
+            .navbar .container { flex-direction: column; }
+            .navbar ul { margin-top: 10px; }
+            .navbar ul li a { padding: 0.5rem; }
+
+            #about .container { flex-direction: column; text-align: center; }
+            
+            .services-grid { grid-template-columns: 1fr; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">المدرب عماد</a>
+            <nav>
+                <ul>
+                    <li><a href="#about">عن المدرب</a></li>
+                    <li><a href="#services">خدماتي</a></li>
+                    <li><a href="#gallery">معرض الصور</a></li>
+                    <li><a href="#pricing">الأسعار</a></li>
+                    <li><a href="#contact">تواصل معي</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <h1>أطلق العنان لقوتك. تدريب شخصي يصل بك إلى هدفك.</h1>
+        <p>مع المدرب عماد، حوّل إمكانياتك إلى واقع. خبرة معتمدة في الفنون القتالية والركبي لتحقيق أقصى درجات اللياقة والقوة.</p>
+        <a href="#contact" class="btn">احجز جلستك الأولى الآن</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-light">
+        <div class="container">
+            <div class="about-img">
+                <!-- ضع صورتك الشخصية هنا -->
+                <img src="imad-personal.jpg" alt="المدرب عماد">
+            </div>
+            <div class="about-text">
+                <h2>معكم المدرب عماد</h2>
+                <p>شغفي بالرياضة هو أسلوب حياة. كمدرب رياضي معتمد وحاصل على دبلوم متخصص، أمتلك سنوات من الخبرة في ساحات الرياضات القتالية وملاعب الركبي. هذه الخلفية المزدوجة منحتني فهماً عميقاً للقوة البدنية، التحمل، والانضباط العقلي.</p>
+                <p>أؤمن بأن كل شخص يمتلك طاقة رياضية كامنة، ومهمتي هي مساعدتك على اكتشافها وتطويرها لتحقيق أهدافك الصحية والرياضية بأمان وفعالية.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-dark">
+        <div class="container">
+            <h2>ماذا أقدم لك؟</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <!-- يمكنك إضافة أيقونات هنا -->
+                    <h3>تدريب شخصي متكامل</h3>
+                    <p>برامج تدريبية مصممة خصيصاً لك، سواء لخسارة الوزن، بناء العضلات، أو رفع مستوى لياقتك. نركز على الأداء الصحيح لتحقيق أفضل النتائج.</p>
+                </div>
+                <div class="service-card">
+                    <h3>أساسيات الفنون القتالية</h3>
+                    <p>استفد من خبرتي لتعلم تقنيات الدفاع عن النفس، زيادة التركيز، وبناء الثقة بالنفس. تدريبات تجمع بين القوة والمرونة الذهنية.</p>
+                </div>
+                <div class="service-card">
+                    <h3>تكييف بدني لرياضة الركبي</h3>
+                    <p>برامج متخصصة للاعبي الركبي لتحسين السرعة، القوة الانفجارية، والتحمل البدني الخاص بالملعب. عزز أداءك لتصل إلى مستوى جديد.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-light">
+        <div class="container">
+            <h2>لحظات من التدريب والمنافسة</h2>
+             <div class="gallery-grid">
+                <!-- ضع صورك هنا -->
+                <img src="imad-rugby.jpg" alt="فريق الركبي">
+                <img src="imad-martial-arts.jpg" alt="فريق الفنون القتالية">
+                <img src="imad-coaching.jpg" alt="جلسة تدريب شخصي">
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section-dark">
+        <div class="container">
+            <h2>استثمار في صحتك بسعر لا يقاوم</h2>
+            <div class="pricing-card">
+                <h3>جلسة تدريب شخصي</h3>
+                <div class="price">100 <span>درهم/ساعة</span></div>
+                <p style="margin-top: 15px;">خطط شهرية متوفرة بأسعار خاصة عند الطلب. استثمر في صحتك اليوم!</p>
+                <a href="#contact" class="btn" style="margin-top: 20px;">احجز الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-light">
+        <div class="container">
+            <h2>هل أنت مستعد للبدء؟ تواصل معي اليوم!</h2>
+            <p style="text-align:center; max-width: 600px; margin: 0 auto 30px auto;">املأ النموذج أدناه أو تواصل معي مباشرة عبر الهاتف أو البريد الإلكتروني لبدء رحلتك نحو أهدافك.</p>
+            
+            <form action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="الاسم الكامل" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="5" placeholder="اكتب رسالتك هنا (مثال: أهدافي، الأوقات المناسبة...)" required></textarea>
+                </div>
+                <button type="submit" class="btn">أرسل واستعد للتغيير</button>
+            </form>
+
+            <div class="contact-info">
+                <!-- قم بتغيير هذه المعلومات -->
+                <p><strong>رقم الهاتف (واتساب):</strong> 212-XXX-XXXXXX+</p>
+                <p><strong>البريد الإلكتروني:</strong> coach.imad@email.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة &copy; 2025 | المدرب عماد</p>
+        </div>
+    </footer>
+
+</body>
+</html>
